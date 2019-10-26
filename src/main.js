@@ -1,12 +1,18 @@
 import React from 'react'
-import { NavLink, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+// import Camera from './camera';
+import Dashboard from './Dashboard';
+// import About from './about';
+import { Switch, Route } from 'react-router-dom';
 
 const Main = () => (
     // set up routes for each application view
     <Switch>
-        <Route path='/' component={App}></Route>
-        <Route path='/camera' component={Camera}></Route>
-        <Route path='/dashboard' component={Dashboard}></Route>
-        <Route path='/about' component={About Us}></Route>
+        <Route exact path='/' component={Home}></Route>
+        {/*<Route exact path='/camera' component={Camera}></Route>*/}
+        <Route exact path='/dashboard' component={Dashboard}></Route>
+        {/*<Route exact path='/about' component={About}></Route>*/}
     </Switch>
 );
+
+export default Main;
