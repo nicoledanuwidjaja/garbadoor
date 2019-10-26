@@ -1,0 +1,16 @@
+.dashboard {
+    padding: 100px;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    background-color: lightgray;
+    border: 1px solid #fff;
+}
+
+.container {
+
+}
