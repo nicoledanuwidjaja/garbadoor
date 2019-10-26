@@ -2,9 +2,12 @@ from flask import Blueprint, jsonify, request
 from . import db
 from .garbageData import doc_col
 from .garbageData import add_item
-import pprint
+import print
 
 main = Blueprint('main', __name__)
+
+@app.route("/")
+def main():
 
 @main.route('/add_data', methods=['Post'])
 def add_data():
@@ -21,3 +24,7 @@ def data():
         cur = doc.to_dict()
         dict[cur['id']] = {'garbageType' : cur['garbageType'], 'count' : cur['count']}
     return dict
+
+if __name__ == "__init__":
+    app.run()
+

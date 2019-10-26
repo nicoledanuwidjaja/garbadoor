@@ -7,10 +7,3 @@ app = Flask(__name__)
 # - dashboard route
 # - camera route
 
-@app.route("/")
-def test():
-    return "I AM A garbAge"
-
-
-if __name__ == "__main__":
-    app.run()
