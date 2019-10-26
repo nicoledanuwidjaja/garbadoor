@@ -22,7 +22,7 @@ class Application extends React.Component {
     render() {
         return <>
             const Nav = () =>
-            <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarNavAltMarkup"
@@ -35,17 +35,23 @@ class Application extends React.Component {
                             <a className="nav-item nav-link" href="#home">Home
                                 <span className="sr-only">(current)</span>
                             </a>
+                            <a className="nav-item nav-link" href="#dashboard">Dashboard
+                                <span className="sr-only">(current)</span>
+                            </a>
+                            <a className="nav-item nav-link" href="#about">About Us
+                                <span className="sr-only">(current)</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </nav>;
 
-            <div className="jumbotron jumbotron-fluid bg-info text-white">
+            <div className="jumbotron jumbotron-fluid bg-success text-white">
                 <div className="container text-sm-center pt-5">
                     <h1 className="display-2">Garbadoor</h1>
                     <p className="lead">The smart city trash organization system!</p>
                     <div className="btn-group mt-4" role="group" aria-label="Callout Buttons">
-                        <button type="button" className="btn btn-primary btn-danger">Try it out</button>
+                        <button type="button" className="btn btn-primary btn-danger" href={"#camera"}>Try it out</button>
                     </div>
                 </div>
             </div>
@@ -97,58 +103,6 @@ class Application extends React.Component {
                             <img className="card-img-top" src="img/4.png"/>
                             <div className="card-body">
                                 <h4 className="card-title text-center">Item Four</h4>
-                                <p className="card-text">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                        <div className="card mb-3">
-                            <img className="card-img-top" src="img/5.png"/>
-                            <div className="card-body">
-                                <h4 className="card-title text-center">Toy Five</h4>
-                                <p className="card-text">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                        <div className="card mb-3">
-                            <img className="card-img-top" src="img/6.png"/>
-                            <div className="card-body">
-                                <h4 className="card-title text-center">Toy Six</h4>
-                                <p className="card-text">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                        <div className="card mb-3">
-                            <img className="card-img-top" src="img/7.png"/>
-                            <div className="card-body">
-                                <h4 className="card-title text-center">Toy Seven</h4>
-                                <p className="card-text">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                        <div className="card mb-3">
-                            <img className="card-img-top" src="img/8.png"/>
-                            <div className="card-body">
-                                <h4 className="card-title text-center">Toy Eight</h4>
                                 <p className="card-text">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been
