@@ -1,0 +1,12 @@
+[
+  {"item": "water bottle", "garbageType": "recycle"},
+  {"item":  "pizza", "garbageType":  "waste"},
+  {"item": "mango", "garbageType": "compost"},
+  {"item":  "eggs", "garbageType":  "compost"},
+  {"item": "Sprite can", "garbageType": "recycle"},
+  {"item":  "banana peel", "garbageType":  "compost"},
+  {"item": "sausage", "garbageType": "waste"},
+  {"item":  "pizza box", "garbageType":  "waste"},
+  {"item": "donut", "garbageType": "waste"},
+  {"item":  "soil", "garbageType":  "compost"}
+]
