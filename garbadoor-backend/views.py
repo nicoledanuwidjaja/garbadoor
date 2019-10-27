@@ -8,9 +8,6 @@ import json
 main = Blueprint('main', __name__)
 local_db = {}
 
-@app.route("/")
-def main():
-
 @main.route('/add_data', methods=['Post'])
 def add_data():
     data = request.get_json()
