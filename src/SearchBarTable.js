@@ -21,13 +21,13 @@ class SearchBarTable extends Component {
         return <div>
             <Search
                 filterText={this.state.filterText}
-                inStockOnly={this.state.inStockOnly}
+                count={this.state.count}
                 onUserInput={this.handleUserInput}
             />
             <Table
-                products={this.props.products}
+                items={this.props.items}
                 filterText={this.state.filterText}
-                inStockOnly={this.state.inStockOnly}
+                count={this.state.count}
             />
         </div>
     }

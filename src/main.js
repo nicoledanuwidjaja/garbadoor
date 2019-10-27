@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Home';
+import Map from './Map';
 // import Camera from './camera';
 import Dashboard from './Dashboard';
 // import About from './about';
