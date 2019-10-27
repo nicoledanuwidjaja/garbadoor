@@ -1,12 +1,14 @@
 import React from 'react';
 import 'bootstrap-4-grid/css/grid.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './Dashboard.css';
+import '@progress/kendo-theme-default/dist/all.css';
 
 // Connect to Google Firebase Database
 import firebasedb from './firebase'
 
 // KendoReact UI
-import {TabStrip, TabStripTab, Menu, PanelBar, PanelBarItem} from '@progress/kendo-react-layout';
+import {TabStrip, TabStripTab} from '@progress/kendo-react-layout';
 import {process, filterBy} from '@progress/kendo-data-query';
 import {Grid, GridColumn as Column} from '@progress/kendo-react-grid';
 
@@ -92,22 +94,22 @@ class Dashboard extends React.Component {
         return <>
             <div className='dashboard'>
                 <div className='container'>
-                    <TabStrip id="tabstrip" selected={this.state.selected} onSelect={this.handleSelect}>
-                        <TabStripTab id="tabstriptab" title="Compost">
+                    <TabStrip selected={this.state.selected} onSelect={this.handleSelect}>
+                        <TabStripTab class="nav navbar-expand nav-tabs nav-justified" title="Compost">
                             <Grid class="categoryGrid" style={{height: "500px"}}
                                   data={onlyCompost}>
                                 <Column field="id" title="ID" width="300px"/>
                                 <Column field="count" title="Count" width="100px" filter="numeric"/>
                             </Grid>
                         </TabStripTab>
-                        <TabStripTab title="Recycle">
+                        <TabStripTab class="nav navbar-expand nav-tabs nav-justified" title="Recycle">
                             <Grid class="categoryGrid" style={{height: "500px"}}
                                   data={onlyRecycle}>
                                 <Column field="id" title="ID" width="300px"/>
                                 <Column field="count" title="Count" width="100px" filter="numeric"/>
                             </Grid>
                         </TabStripTab>
-                        <TabStripTab title="Garbage">
+                        <TabStripTab class="nav navbar-expand nav-tabs nav-justified" title="Garbage">
                             <Grid class="categoryGrid" style={{height: "500px"}}
                                   data={onlyGarbage}>
                                 <Column field="id" title="ID" width="300px"/>
@@ -117,6 +119,41 @@ class Dashboard extends React.Component {
                     </TabStrip>
                 </div>
             </div>
+
+            <div className="dashboard">
+                <div className="container">
+                    <ul className="nav nav-tabs">
+                        <li className="active"><a data-toggle="tab">compost</a></li>
+                        <li><a data-toggle="tab" href="#menu1">garbage</a></li>
+                        <li><a data-toggle="tab" href="#menu2">recycle</a></li>
+                    </ul>
+
+                    <div className="tab-content">
+                        <div id="compost" className="tab-pane fade in active">
+                            <Grid class="categoryGrid" style={{height: "500px"}}
+                                  data={onlyCompost}>
+                                <Column field="id" title="ID" width="300px"/>
+                                <Column field="count" title="Count" width="100px" filter="numeric"/>
+                            </Grid>
+                        </div>
+                        <div id="garbage" className="tab-pane fade">
+                            <Grid class="categoryGrid" style={{height: "500px"}}
+                                  data={onlyGarbage}>
+                                <Column field="id" title="ID" width="300px"/>
+                                <Column field="count" title="Count" width="100px" filter="numeric"/>
+                            </Grid>
+                        </div>
+                        <div id="recycle" className="tab-pane fade">
+                            <Grid class="categoryGrid" style={{height: "500px"}}
+                                  data={onlyRecycle}>
+                                <Column field="id" title="ID" width="300px"/>
+                                <Column field="count" title="Count" width="100px" filter="numeric"/>
+                            </Grid>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div className="container pt-4">
                 <footer>
@@ -135,7 +172,8 @@ class Dashboard extends React.Component {
                     </div>
                 </footer>
             </div>
-        </>;
+        </>
+            ;
     }
 }
 
