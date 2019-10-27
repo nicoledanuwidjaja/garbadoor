@@ -30,6 +30,10 @@ class Home extends React.Component {
                 </div>
             </div>
 
+            <div>
+                <p><img align="center" src={"https://pokewalls.files.wordpress.com/2012/12/569garbodor1920x1200.jpg"}/></p>
+            </div>
+
         </>;
     }
 }

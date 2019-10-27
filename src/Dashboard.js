@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './Dashboard.css';
 import '@progress/kendo-theme-default/dist/all.css';
 
+import items from './items'
+
 // Connect to Google Firebase Database
 import firebasedb from './firebase'
 
@@ -51,14 +53,14 @@ class Dashboard extends React.Component {
     componentWillMount() {
         fetch('/get_live_data')
             .then(result => result.json())
-            .then(result => this.setState({items: result.items}));
+            .then(result => this.setState({items: result}));
         console.log("This works");
     }
 
     componentDidMount() {
         fetch('/get_live_data')
             .then(result => result.json())
-            .then(result => this.setState({items: result.items}));
+            .then(result => this.setState({items: result}));
     }
 
     // handles tab switching

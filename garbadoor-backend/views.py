@@ -37,4 +37,4 @@ def update_data_live():
 def get_live_data():
     with open('localdb.txt', 'r') as infile:
         local_db = json.loads(infile.read())
-    return local_db
+    return json.dumps(local_db)

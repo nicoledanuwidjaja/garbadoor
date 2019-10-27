@@ -9,7 +9,6 @@ db = firestore.client()
 
 doc_col = db.collection(u'Items')
 
-
 def add_item(item_dict):
     if doc_col.document(item_dict['name']).get().exists:
         doc_col.document(item_dict['name']).set({
