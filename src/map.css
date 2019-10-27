@@ -1,0 +1,9 @@
+.statistics {
+    position: absolute;
+    width: 500px;
+    height: 650px;
+    right: 10px;
+    top: 65px;
+    background-color: #122747;
+    border-radius: 35px;
+}
