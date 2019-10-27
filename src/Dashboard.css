@@ -11,6 +11,45 @@
     border: 1px solid #fff;
 }
 
-.container {
+/*dashboard-css {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    min-height: 80px;*/
+/*    box-sizing: border-box;*/
+/*    padding: 30px;*/
+/*}*/
 
+/*dashboard-css > .k-icon.k-i-loading {*/
+/*    font-size: 64px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+#tabstrip h2 {
+    font-weight: lighter;
+    font-size: 5em;
+    line-height: 1;
+    padding: 0 0 0 30px;
+    margin: 0;
 }
+
+#tabstriptab title {
+    display: block;
+    margin: 30px auto 10px;
+    width: 128px;
+    height: 128px;
+}
+
+/*#tabstrip h2 span {*/
+/*    background: none;*/
+/*    padding-left: 5px;*/
+/*    font-size: .3em;*/
+/*    vertical-align: top;*/
+/*}*/
+
+/*#tabstrip p {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/

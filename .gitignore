@@ -20,6 +20,7 @@
 
 # secrets
 garbadoor.json
+/src/firebase.js
 
 npm-debug.log*
 yarn-debug.log*

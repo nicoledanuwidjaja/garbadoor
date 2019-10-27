@@ -25,8 +25,7 @@ class Home extends React.Component {
                     <h1 className="display-2">Garbadoor</h1>
                     <p className="lead">The smart city trash organization system!</p>
                     <div className="btn-group mt-4" role="group" aria-label="Callout Buttons">
-                        <button type="button" className="btn btn-primary btn-danger" href={"#camera"}>Try it out
-                        </button>
+                        <button type="button" className="btn btn-primary btn-danger" href={"#camera"}>Try it out</button>
                     </div>
                 </div>
             </div>
@@ -90,21 +89,18 @@ class Home extends React.Component {
 
                 <hr/>
 
-                <footer>
-                    <div className="row py-3">
-                        <div className="col-md-7">
-                            <ul className="nav">
-                                <li className="nav-item">
-                                    <a className="nav-link"
-                                       href={"https://github.com/nicoledanuwidjaja/garbadoor"}>GitHub</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-md text-md-right">
-                            <small>&copy; Garbadoor YHack 2019</small>
-                        </div>
+                <div className="row py-3">
+                    <div className="col-md-7">
+                        <ul className="nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href={"https://github.com/nicoledanuwidjaja/garbadoor"}>GitHub</a>
+                            </li>
+                        </ul>
                     </div>
-                </footer>
+                    <div className="col-md text-md-right">
+                        <small>&copy; Garbadoor</small>
+                    </div>
+                </div>
             </div>
         </>;
     }

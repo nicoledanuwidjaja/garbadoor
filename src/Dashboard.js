@@ -2,9 +2,8 @@ import React from 'react';
 import 'bootstrap-4-grid/css/grid.min.css';
 import './Dashboard.css';
 
-
-// Data from JSON objects (Firebase)
-import items from './items.json';
+// Connect to Google Firebase Database
+import firebasedb from './firebase'
 
 // KendoReact UI
 import {TabStrip, TabStripTab, Menu, PanelBar, PanelBarItem} from '@progress/kendo-react-layout';
@@ -17,11 +16,11 @@ class Dashboard extends React.Component {
 
         this.state = {
             selected: 0,
-            dataState: {
-                sort: [
-                    {field: "garbageType", dir: "asc"}
-                ]
-            }
+            // Data from JSON objects (Firebase)
+            items: [],
+            count: [],
+            garbageType: [],
+            id: [],
         }
     }
 
@@ -29,19 +28,36 @@ class Dashboard extends React.Component {
         this.setState({selected: e.selected})
     };
 
-    // state = this.createAppState({
-    //     group: [{field: 'garbageType'}]
-    // });
-    //
-    // isGroupable = (field) => {
-    //     return !((this.state.data.group || []).find((item) => item.field === field));
-    // }
-    //
+    updateItems(items) {
+        // grabs collection of Items
+        const dbItems = firebasedb.database().ref().child('Items');
+
+        dbItems.once("value", snapshot => {
+            snapshot.forEach(child => {
+                this.setState({
+                    id: this.state.id.add([child.key]),
+                    garbageType: this.state.garbageType.add([child.val().garbageType]),
+                    count: this.state.count.add([child.val().count]),
+                });
+            })
+        }).then();
+
+        // assign values of all items to object fields
+        dbItems.on('child_added', snapshot => {
+            snapshot.forEach(child => {
+                this.setState({
+                    id: this.state.id.add([child.key]),
+                    garbageType: this.state.garbageType.add([child.val().garbageType]),
+                    count: this.state.count.add([child.val().count]),
+                });
+            })
+        });
+    }
 
     createAppState(dataState) {
         return {
             dataState: dataState,
-            result: process(items, dataState)
+            result: process(this.state.items, dataState)
         };
     }
 
@@ -50,22 +66,23 @@ class Dashboard extends React.Component {
     }
 
     render() {
+        this.updateItems(this.state.items);
         // constant arrays for filtered lists based on category
-        const onlyGarbage = filterBy(items, {
+        const onlyGarbage = filterBy(this.state.items, {
             logic: 'and',
             filters: [
                 {field: "garbageType", operator: "eq", value: "garbage"},
             ]
         });
 
-        const onlyCompost = filterBy(items, {
+        const onlyCompost = filterBy(this.state.items, {
             logic: 'and',
             filters: [
                 {field: "garbageType", operator: "eq", value: "compost"},
             ]
         });
 
-        const onlyRecycle = filterBy(items, {
+        const onlyRecycle = filterBy(this.state.items, {
             logic: 'and',
             filters: [
                 {field: "garbageType", operator: "eq", value: "recycle"},
@@ -75,8 +92,8 @@ class Dashboard extends React.Component {
         return <>
             <div className='dashboard'>
                 <div className='container'>
-                    <TabStrip selected={this.state.selected} onSelect={this.handleSelect}>
-                        <TabStripTab title="Compost">
+                    <TabStrip id="tabstrip" selected={this.state.selected} onSelect={this.handleSelect}>
+                        <TabStripTab id="tabstriptab" title="Compost">
                             <Grid class="categoryGrid" style={{height: "500px"}}
                                   data={onlyCompost}>
                                 <Column field="id" title="ID" width="300px"/>
@@ -100,6 +117,7 @@ class Dashboard extends React.Component {
                     </TabStrip>
                 </div>
             </div>
+
             <div className="container pt-4">
                 <footer>
                     <div className="row py-3">
