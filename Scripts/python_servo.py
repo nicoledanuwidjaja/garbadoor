@@ -2,16 +2,23 @@ import serial
 
 ser1 = serial.Serial('COM5', 9600)
 
-def operate_servo(servo):
+def operate_servo(choice):
+  global ser1
+  try:
+    print("writing " + choice + " to serial.")
+    ser1.write(choice.encode())
+  except:
+    print("Reconnecting to serial.")
+    ser1 = serial.Serial('COM5', 9600)
+    try:
+  	  print("writing " + choice + " to serial trial 2")
+  	  ser1.write(choice.encode())
+    except:
+  	  print("cannot connect to serial")
 
-  if servo == '1':
-    print("activating servo 1\n")
-    ser1.write('1'.encode())
-  elif servo == '2':
-    print("activating servo 2\n")
-    ser1.write('2'.encode())
-  elif servo == '3':
-    print("activating servo 3\n")
-    ser1.write('3'.encode())
+def choose_servo(servo):
+  if servo == '1' or servo == '2' or servo == '3':
+    print("activating servo " + servo + "\n")
+    operate_servo(servo)
   else:
     print("not a valid option\n")

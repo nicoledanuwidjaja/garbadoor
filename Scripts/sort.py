@@ -9,8 +9,8 @@ from google.cloud import vision
 from google.cloud.vision import types
 from python_servo import operate_servo
 
-
 URL = 'http://127.0.0.1:5000/data'
+URL_POST = 'http://127.0.0.1:5000/update_data_live'
 db = requests.get(url = URL).json()
 
 fig2 = plt.figure()
@@ -52,7 +52,6 @@ def sort_garbage(labels):
     rec = 0
     gbg = 0
     cmp = 0
-    print(db)
     for label in labels:
         if label.description in db:
             if db[label.description]['garbageType'] == 'recycle':
@@ -62,6 +61,8 @@ def sort_garbage(labels):
             else:
                 gbg = gbg + 1
             db[label.description]['count'] += 1
+    db_json = json.dumps(db)
+    r = requests.post(url = URL_POST, data = db_json)
     if (rec == 0 and gbg == 0 and cmp == 0):
         return 'no garbage found'
     if (gbg >= rec and gbg >= cmp):

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "garbadoor",
+  "private_key_id": "88843b8c25cfe37c4f8be06fd543360135cd3925",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDNsMAduCtZ693E\nQ0XEu4wJCU/OcQ23RZCck3fSUCCYxbbmvw/I83eDRv/dnh+EFI29qYb/F8oR54af\nsgU5cDGWJ5PT1/jsq15H7uPggxeabljZnLZtoGg2Jge3YM/5aacbZPNPcYxsuD0H\nZJGvrsoRAVvSu2EGWk+KgNZYn4TbcYqVNS032isBt5icBZusQOL5HpLwx0IB+HQS\ntN2XvFTFZ4pkDilklgzbh454Q4IdMNSur89AtsdxIylNHXCM0yifaRlQ5Bmd39eZ\nanEq8sTGhGi2+/j+lH7RvgVu1QCn0SyM0b+O/e24T+Y4oygEUSRIc88cNlhP/bRe\ncJtyIAtXAgMBAAECggEATKhBSTIwkeAqM7FgqJu+6kU6pXUTyAhYh0ocX1i2dUlG\nS4PMVbeLBHVq+USreTWRx6wNIDfU+sw/K3gUo13xVQUl/k8guc96ITPiYHNq0gaq\n/Vr+0Cd2fyu4N3sQt2LNQRPj6+klDQWy1PUBqKhrLWBEwOpNlCkHONagS8ITqRZh\nfKg6uP9fz03f8pcfjYud/GfO9eoN6R7c59bk0xieNh7rhtf9RmG/mNV4wX7aJQ61\nEWqvxuRr8YD+HD8sGfw0fnYtNZfXVOgrLSQrAy9r3EjRpp8JjhYcGr6MRWjKgeqA\n1G5DBAPFNKiMh+nsS3WYxb7eydv30d09N8sGUbAOHQKBgQD6g5KzauD4fwbtmA15\nuNbHtoU++0OkzCLbmMxn3eF/ceGLtRe7NTiDLh+Ll3lU68oKIUH8I4cMpuMT5Xv1\nqeOXhDD4+++4VDb+S6vCegh9/+JDoWcKGBipbvqdMy/kYWFYExtxVMiqw7gq081A\nfo39KlVl3QYAu1te4o2DIcp5wwKBgQDSMeN3WdXnU5B43kHDGUa8sUyTMLT87cHJ\nJNa+qlJ5UFihXai/RlhoTdpdxacQElovqKgdQKR80fx2YrT0sWiW0R67zZae237/\nCHXB3OUxTDBvI/HDmHr2KuLRw6I37t2aY43CYhzOcOiSdwK1rL5K1DrB48zEoSyi\nL4NAw5p63QKBgQCIIz5y8E8n2+hI8AvKrU9TIvZQXr3I7gK3cdcLTwH/f0TB5nzq\nCKcYatVLx9pw8t5OGPrB6hC3KG5Y3qo5u8RqD7WJaWhBtMpZ8Yd63VSGHKu6cxkK\n3ENyuFPLYAjTxLPg6ClOsnOGkWwhIg710JCbFwlnnPBpL2gdLWMX8yIUfwKBgQCd\neu0uRWtCdlQ+il6A2pYp1zhE6vAes89FcUlG7nr+ExlkRLSiIgUomHOrX+OL4gQZ\nwuW5jO3v6q+Yztk+nxB6NlEtaZmYiWD7mI4JYgOBTNDY4/hFkB9IAdeQS19lQpxb\nCI1z/mgQr31ABtRL4xFrJNik3ZRUGWFEXg6bXjGGLQKBgQDxoT3h4l+WNJMzAIwz\n6VsYYfMYl7KDGm/MfbeOMnG49rxsMrS+to/zmzZILqzpxivmh63dyq6N7f7SOY4H\n/A8bRZ3s8L17HmoulKsxdx6fDzp35z6qRQy7N6+tWR/YMc5/N1z1NGfKz1+0u516\nqeNA/CXZIFGVGP67nh+W0WjseQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "garbadoor-service@garbadoor.iam.gserviceaccount.com",
+  "client_id": "117749829750341749060",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/garbadoor-service%40garbadoor.iam.gserviceaccount.com"
+}
