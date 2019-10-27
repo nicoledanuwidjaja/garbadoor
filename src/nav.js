@@ -22,8 +22,13 @@ const Nav = () =>
                     </a>
                 </div>
             </div>
+            <div className="navbar navbar-nav text-right">
+                <a className="nav-item nav-link" href="/">GarbaᎠᎾᎾᏒ
+                    <span className="sr-only">(current)</span>
+                </a>
+            </div>
         </div>
-    </nav>;
+        < /nav>;
 
 
-    export default Nav;
+            export default Nav;

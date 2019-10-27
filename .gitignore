@@ -18,6 +18,10 @@
 .env.test.local
 .env.production.local
 
+# secrets
+garbadoor.json
+/src/firebase.js
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
